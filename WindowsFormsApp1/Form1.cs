@@ -29,12 +29,12 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            ShowScreen(new homepage());
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            ShowScreen(new inventory());
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -44,8 +44,22 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            ShowScreen(new Checkout());
         }
+
+        private void ShowScreen(UserControl newScreen)
+        {
+            
+            foreach (Control ctrl in panel2.Controls)
+            {
+                ctrl.Dispose();
+            }
+
+            panel2.Controls.Clear(); 
+            newScreen.Dock = DockStyle.Fill; 
+            panel2.Controls.Add(newScreen); 
+        }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -58,6 +72,21 @@ namespace WindowsFormsApp1
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
 
         }

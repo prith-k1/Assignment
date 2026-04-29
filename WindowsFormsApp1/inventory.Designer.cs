@@ -51,7 +51,7 @@
             this.Quantity,
             this.productid,
             this.name});
-            this.dataGridView1.Location = new System.Drawing.Point(589, 86);
+            this.dataGridView1.Location = new System.Drawing.Point(387, 86);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(391, 363);
             this.dataGridView1.TabIndex = 4;
@@ -80,7 +80,7 @@
             this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Location = new System.Drawing.Point(240, 86);
+            this.groupBox1.Location = new System.Drawing.Point(38, 86);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(343, 363);
             this.groupBox1.TabIndex = 3;
