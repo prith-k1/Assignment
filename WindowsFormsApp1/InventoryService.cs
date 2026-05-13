@@ -33,7 +33,10 @@ namespace WindowsFormsApp1
                         products.Add(new Product(id, name, brand, price, quantity));
 
                     }
-                    catch { }
+                    catch 
+                    {
+                        
+                    }
                 }
             }
             return products;
