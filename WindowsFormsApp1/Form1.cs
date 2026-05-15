@@ -90,5 +90,10 @@ namespace WindowsFormsApp1
         {
             ShowScreen(new EditProduct());
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ShowScreen(new BuildOrder());
+        }
     }
 }

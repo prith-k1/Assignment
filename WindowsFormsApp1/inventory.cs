@@ -114,10 +114,8 @@ namespace WindowsFormsApp1
                     productToUpdate.ProductPrice = decimal.Parse(productPrice.Text);
                     productToUpdate.ProductQuantity = int.Parse(productQuantity.Text);
 
-
                     _bindingSource.ResetBindings(false);
                     dataGridView1.Refresh();
-
 
                     ClearFields();
                     MessageBox.Show("Product updated successfully in the list.");
