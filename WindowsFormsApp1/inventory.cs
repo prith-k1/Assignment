@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     {
         private BindingList<Product> _inventorylist = new BindingList<Product>();
         private BindingSource _bindingSource = new BindingSource();
-        string filePath = "H:/Programming/project/WindowsFormsApp1/WindowsFormsApp1/product.csv";
+        string filePath = System.IO.Path.GetFullPath(System.IO.Path.Combine(Application.StartupPath, @"..\..\product.csv"));
         public inventory()
         {
             InitializeComponent();
