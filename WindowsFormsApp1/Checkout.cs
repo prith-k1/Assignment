@@ -15,8 +15,10 @@ namespace WindowsFormsApp1
     {
         private BindingList<OrderItem> _checkoutItems = new BindingList<OrderItem>();
 
+
         public Checkout()
         {
+            
             InitializeComponent();
             SetupCheckoutSystem();
         }
@@ -53,8 +55,10 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Load an order before completing a sale.");
                 return;
             }
+            homepage.OrderTotal.OrderTotalNum++;
+            
 
-            MessageBox.Show("Sale completed.");
+            MessageBox.Show($"Sale completed. Order number: {homepage.OrderTotal.OrderTotalNum}");
             ClearCheckout();
         }
 

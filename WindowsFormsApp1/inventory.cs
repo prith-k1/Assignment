@@ -13,6 +13,13 @@ namespace WindowsFormsApp1
 {
     public partial class inventory : UserControl
     {
+        public static class QuantityTotal
+        {
+
+
+        }
+
+
         private BindingList<Product> _inventorylist = new BindingList<Product>();
         private BindingSource _bindingSource = new BindingSource();
         string filePath = System.IO.Path.GetFullPath(System.IO.Path.Combine(Application.StartupPath, @"..\..\product.csv"));
@@ -64,8 +71,7 @@ namespace WindowsFormsApp1
         }
         private bool ValidateInputs()
         {
-            // Check if Name contains invalid special characters like #, $, @
-            // This regex allows only letters, numbers, and spaces
+
             if (!Regex.IsMatch(productName.Text, @"^[a-zA-Z0-9 ]+$"))
             {
                 MessageBox.Show("Product Name contains invalid characters.");
