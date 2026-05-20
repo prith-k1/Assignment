@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,6 +13,8 @@ namespace WindowsFormsApp1
         public static List<Product> LoadFromCSV(string filePath) 
         {
             List<Product> products = new List<Product>();
+
+            
 
             if (!File.Exists(filePath)) return products;
 
@@ -40,6 +43,14 @@ namespace WindowsFormsApp1
                 }
             }
             return products;
+        }
+
+        public static int CountLowQuantityItems(string filePath)
+        {
+            List<Product> products = LoadFromCSV(filePath);
+
+            int lowQuantityCount = products.Count(p => p.ProductQuantity < 10);
+            return lowQuantityCount;
         }
 
 

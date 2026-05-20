@@ -18,12 +18,14 @@ namespace WindowsFormsApp1
         {
             public static int OrderTotalNum = 0;
         }
+        
         public homepage()
         {
             InitializeComponent();
-            int lineCount = File.ReadLines(filePath).Count();
+            int lineCount = File.ReadLines(filePath).Skip(1).Where(line => !string.IsNullOrWhiteSpace(line)).Count();
             label2.Text = $"{lineCount}";
             label5.Text = $"{OrderTotal.OrderTotalNum}";
+            label6.Text = $"{InventoryService.CountLowQuantityItems(filePath)}";
             
             
         }
@@ -55,6 +57,11 @@ namespace WindowsFormsApp1
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
