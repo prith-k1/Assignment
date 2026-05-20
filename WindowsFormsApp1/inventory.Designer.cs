@@ -42,12 +42,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DelProduct = new System.Windows.Forms.Button();
+            this.DelBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.DelBox);
+            this.groupBox1.Controls.Add(this.DelProduct);
             this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.productQuantity);
@@ -60,16 +64,16 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(38, 86);
+            this.groupBox1.Location = new System.Drawing.Point(38, 87);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(343, 363);
+            this.groupBox1.Size = new System.Drawing.Size(306, 362);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(148, 236);
+            this.btnUpdate.Location = new System.Drawing.Point(126, 236);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 15;
@@ -176,6 +180,24 @@
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // DelProduct
+            // 
+            this.DelProduct.Location = new System.Drawing.Point(23, 281);
+            this.DelProduct.Name = "DelProduct";
+            this.DelProduct.Size = new System.Drawing.Size(75, 23);
+            this.DelProduct.TabIndex = 16;
+            this.DelProduct.Text = "Delete";
+            this.DelProduct.UseVisualStyleBackColor = true;
+            this.DelProduct.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // DelBox
+            // 
+            this.DelBox.Location = new System.Drawing.Point(124, 281);
+            this.DelBox.Name = "DelBox";
+            this.DelBox.Size = new System.Drawing.Size(100, 20);
+            this.DelBox.TabIndex = 17;
+            this.DelBox.TextChanged += new System.EventHandler(this.DelBox_TextChanged);
+            // 
             // inventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,5 +229,7 @@
         private System.Windows.Forms.TextBox productName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button DelProduct;
+        private System.Windows.Forms.TextBox DelBox;
     }
 }
