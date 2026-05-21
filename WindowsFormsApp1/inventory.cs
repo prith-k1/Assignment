@@ -124,7 +124,7 @@ namespace WindowsFormsApp1
                     dataGridView1.Refresh();
 
                     ClearFields();
-                    MessageBox.Show("Product updated successfully in the list.");
+                    MessageBox.Show("Product updated successfully in the list. CSV updated.");
 
                     List<Product> listToSave = _inventorylist.ToList();
                     InventoryService.SaveToCSV(filePath, listToSave);
@@ -134,6 +134,38 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Product ID not found in inventory.");
             }
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string SearchTerm = DelBox.Text.Trim();
+            if(string.IsNullOrWhiteSpace(SearchTerm))
+            {
+                MessageBox.Show("Please enter a valid product ID/Name to delete.");
+                return;
+            }
+            Product productToDelete = _inventorylist.FirstOrDefault(p => p.ProductID.ToString() == SearchTerm || p.ProductName.Equals(SearchTerm, StringComparison.OrdinalIgnoreCase));
+            if(productToDelete != null)
+            {
+                DialogResult result = MessageBox.Show($"Are you sure you want to delete {productToDelete.ProductName}?");
+                if (result == DialogResult.Yes)
+                {
+                    _inventorylist.Remove(productToDelete);
+                    DelBox.Clear();
+                    MessageBox.Show("Product deleted succesfully");
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("No product found matching that name or ID.");
+            }
+        }
+
+        private void DelBox_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
