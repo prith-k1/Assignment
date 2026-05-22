@@ -58,7 +58,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(846, 19);
+            this.button5.Location = new System.Drawing.Point(951, 19);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(130, 38);
             this.button5.TabIndex = 4;
@@ -73,7 +73,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(582, 19);
+            this.button3.Location = new System.Drawing.Point(683, 19);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(130, 38);
             this.button3.TabIndex = 2;
@@ -88,7 +88,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(318, 19);
+            this.button2.Location = new System.Drawing.Point(359, 19);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(130, 38);
             this.button2.TabIndex = 1;
@@ -98,12 +98,12 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(65)))), ((int)(((byte)(81)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(54, 19);
+            this.button1.Location = new System.Drawing.Point(61, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 38);
             this.button1.TabIndex = 0;
@@ -122,7 +122,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(1168, 631);
