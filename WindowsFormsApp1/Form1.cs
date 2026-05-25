@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
@@ -95,6 +96,18 @@ namespace WindowsFormsApp1
         private void button5_Click(object sender, EventArgs e)
         {
             ShowScreen(new BuildOrder());
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            DialogResult msg = MessageBox.Show("Would you like to logout", "Logout confirmation", MessageBoxButtons.YesNo);
+
+            if (msg == DialogResult.Yes)
+            {
+                new Login().Show();
+                this.Close();
+            }
+            
         }
     }
 }

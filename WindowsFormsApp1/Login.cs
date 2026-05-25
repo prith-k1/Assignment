@@ -56,8 +56,7 @@ namespace WindowsFormsApp1
                 {
                     MessageBox.Show("Login successful");
                     new Form1().Show();
-                    this.Hide();
-                    return;
+                    this.Close();
                 }
             }
             MessageBox.Show("Wrong username or password");
